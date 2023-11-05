@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>註冊</title>
+</head>
+
+<body>
+
+<form action="formTest.php" method="post" name="form1" id="form1">
+<p>
+  <label for="textfield">姓名:</label>
+  <input name="stuID" type="text" autofocus required id="stuID" size="10" maxlength="8">
+</p>
+<p>
+    <label for="textfield">職稱:</label>
+  <select name="career">
+    <option value="工程師" selected="True">工程師</option>
+    <option value="業務">業務</option>
+ </select><br/>
+</p>
+<p>
+    <label for="textfield">性別:</label>
+    <select name="sex">
+        <option value="男" selected="True">男</option>
+        <option value="女">女</option>
+     </select><br/>
+  </p>
+  <p>
+    <label for="password">出生年月日:</label>
+    <input name="password" type="date" autofocus required id="stuID" size="10" maxlength="8">
+  </p>
+  <p>
+    <label for="textfield">地址:</label>
+    <input name="stuID3" type="text" autofocus required id="stuID" size="20" maxlength="8">
+  </p>
+<p>
+  <input type="reset" name="reset" id="reset" value="重設">
+  <input type="submit" name="submit" id="submit" value="註冊">
+</p>
+</form>
+</body>
+</html>
