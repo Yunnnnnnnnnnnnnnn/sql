@@ -8,15 +8,13 @@ if ($conn->connect_error) {
 	$pwd = $_POST['password'];
 	$career = $_POST['career'];
 	$sex= $_POST['sex'];
-	$adress= $_POST['stuID'];
+	$adress= $_POST['stuID3'];
 	$sql = $sql = "select max(c.員工編號) from 員工 c ";
 	$result = $conn->query($sql);
-	if ($result) {
-		$row = $result->fetch_row();
+	
+	$row = $result->fetch_row();
 	$num = $row[0]+1;
-	} else {
-		echo "查询失败: " . $conn->error;
-	}
+
 	if($career == "工程師"){
 		$manager = 4;
 	}else{
@@ -29,8 +27,10 @@ $phone = rand(1500, 3000);
 	$sql.="VALUES ($num,'".$id."','".$career."','".$sex."',$manager,'".$pwd."','".$currentDateTime."',$Number,'".$adress."',$phone)";
 	//$result = $conn->query($sql);
 	 if ($conn->query($sql)) {
-	 	echo "失敗";
+	 	echo "註冊成功，回登入畫面";
+		
 	} else {
-	 	echo "成功 " ;
+	 	echo "註冊失敗，需重新註冊 " ;
 	 }
 ?>
+<hr/>| <a href="hom.html">回登入首頁</a>;
