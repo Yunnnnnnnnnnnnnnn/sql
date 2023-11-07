@@ -42,6 +42,7 @@ if($row[0] == 1){
     echo "</form>";
     echo "<a href='delete.php?name=$id&pwd=$pwd'>註銷帳號</a><br>";
     echo "<a href='checkorder.php?name=$id&pwd=$pwd&num=$num'>查看訂單</a><br>";
+    echo "<a href='order.php?num=$num'>新增訂單</a><br>";
 }else{
     echo '登入失敗';
 }

@@ -11,7 +11,7 @@ if ($conn->connect_error) {
 	$adress= $_POST['stuID3'];
 	$sql = $sql = "select max(c.員工編號) from 員工 c ";
 	$result = $conn->query($sql);
-	
+
 	$row = $result->fetch_row();
 	$num = $row[0]+1;
 
@@ -25,7 +25,7 @@ $Number = rand(100, 500);
 $phone = rand(1500, 3000);
 	$sql="INSERT INTO `員工`(`員工編號`, `姓名`, `職稱`, `性別`, `主管`, `出生日期`, `任用日期`, `區域號碼`, `地址`, `分機號碼`) ";
 	$sql.="VALUES ($num,'".$id."','".$career."','".$sex."',$manager,'".$pwd."','".$currentDateTime."',$Number,'".$adress."',$phone)";
-	//$result = $conn->query($sql);
+
 	 if ($conn->query($sql)) {
 	 	echo "註冊成功，回登入畫面";
 		
