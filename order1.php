@@ -24,8 +24,9 @@ $sql = "INSERT INTO `訂單`(`訂單編號`, `員工編號`, `客戶編號`, `�
 $sql .= "VALUES ('$max','$num','$customer','$order_date','$ship_date','$expected_arrival_date','$actual_arrival_date','$payment','$delivery')";
 if ($conn->query($sql)) {
   echo "新增成功";
- 
+  
 } else {
   echo "新增失敗" ;
 }
 ?>
+<hr/>| <a href="hom.html">回登入首頁</a>;
