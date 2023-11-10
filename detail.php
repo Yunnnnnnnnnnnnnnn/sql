@@ -15,7 +15,7 @@ if(isset($_GET['order'])){
     } else {
         echo "Error: " . $conn->error;
     }
-    header("Location:http://localhost:8080/%E6%9C%9F%E4%B8%AD/detail.php?num=$num");
+    header("Location:detail.php?num=$num");
 }
 elseif(isset($_GET['delete'])){
     $order = $_GET['delete'];
